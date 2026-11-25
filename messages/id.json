@@ -1,0 +1,29 @@
+{
+  "Meta": { "title": "Northkit - Starter Next.js milik sendiri", "description": "Starter Next.js open source dengan Better Auth, Drizzle, i18n bawaan, tiga tema, dan SEO. Tanpa vendor lock-in." },
+  "Nav": { "features": "Fitur", "pricing": "Roadmap", "login": "Masuk", "signup": "Mulai", "dashboard": "Dasbor", "logout": "Keluar", "admin": "Admin" },
+  "Home": {
+    "badge": "Open source, MIT",
+    "title": "Luncurkan SaaS di stack milikmu sendiri.",
+    "subtitle": "Next.js, Better Auth, Drizzle, dan i18n bawaan. Tanpa Clerk, tanpa lock-in, dark dan mobile-first sejak awal.",
+    "cta": "Mulai bangun",
+    "ctaSecondary": "Lihat di GitHub",
+    "featuresTitle": "Yang dilewatkan starter lain",
+    "f1t": "i18n sungguhan", "f1d": "Inggris dan Indonesia siap pakai, siap RTL, hreflang beres.",
+    "f2t": "Auth self-hosted", "f2d": "Better Auth dengan email, GitHub, dan Google. Data pengguna tetap di database kamu.",
+    "f3t": "Admin sudah ada", "f3d": "Daftar user, peran, dan kontrol ban sudah terpasang.",
+    "f4t": "Tiga tema", "f4d": "Midnight, Paper, dan Ember. Ganti lewat satu file token.",
+    "f5t": "SEO bawaan", "f5d": "Metadata, sitemap, robots, Open Graph, dan JSON-LD sejak awal.",
+    "f6t": "Deploy di mana saja", "f6d": "Panduan Docker, Vercel, dan Cloudflare yang sudah diuji."
+  },
+  "Auth": {
+    "loginTitle": "Selamat datang kembali", "signupTitle": "Buat akunmu",
+    "name": "Nama", "email": "Email", "password": "Kata sandi",
+    "login": "Masuk", "signup": "Buat akun",
+    "noAccount": "Belum punya akun?", "haveAccount": "Sudah punya akun?",
+    "error": "Ada yang salah. Periksa data lalu coba lagi."
+  },
+  "Dashboard": { "title": "Dasbor", "welcome": "Masuk sebagai", "role": "Peran", "theme": "Tema" },
+  "Admin": { "title": "Pengguna", "name": "Nama", "email": "Email", "role": "Peran", "status": "Status", "banned": "Diblokir", "active": "Aktif", "forbidden": "Khusus admin.", "ban": "Blokir", "unban": "Buka blokir", "more": "Aksi lainnya", "remove": "Hapus pengguna", "confirm": "Konfirmasi hapus" },
+  "Theme": { "midnight": "Midnight", "paper": "Paper", "ember": "Ember" },
+  "Footer": { "rights": "Northkit. Lisensi MIT." }
+}
