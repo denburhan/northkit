@@ -2,6 +2,7 @@ import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { admin } from "better-auth/plugins";
 import { nextCookies } from "better-auth/next-js";
+import { sendMail } from "@/lib/mailer";
 import { db } from "@/db";
 import * as schema from "@/db/schema";
 
@@ -9,7 +10,20 @@ export const auth = betterAuth({
   database: drizzleAdapter(db, { provider: "sqlite", schema }),
   secret: process.env.BETTER_AUTH_SECRET,
   baseURL: process.env.BETTER_AUTH_URL,
-  emailAndPassword: { enabled: true, minPasswordLength: 8 },
+  emailAndPassword: {
+    enabled: true,
+    minPasswordLength: 8,
+    requireEmailVerification: process.env.REQUIRE_EMAIL_VERIFICATION === "true",
+    sendResetPassword: async ({ user, url }) => {
+      await sendMail({ to: user.email, subject: "Reset your password", text: `Reset your password: ${url}\n\nIgnore this email if you did not ask for it.` });
+    },
+  },
+  emailVerification: {
+    sendOnSignUp: process.env.REQUIRE_EMAIL_VERIFICATION === "true",
+    sendVerificationEmail: async ({ user, url }) => {
+      await sendMail({ to: user.email, subject: "Verify your email", text: `Verify your email: ${url}` });
+    },
+  },
   socialProviders: {
     ...(process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET
       ? { github: { clientId: process.env.GITHUB_CLIENT_ID, clientSecret: process.env.GITHUB_CLIENT_SECRET } }

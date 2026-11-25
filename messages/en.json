@@ -1,6 +1,17 @@
 {
-  "Meta": { "title": "Northkit - Self-owned Next.js starter", "description": "Open-source Next.js starter with Better Auth, Drizzle, native i18n, three themes and built-in SEO. No vendor lock-in." },
-  "Nav": { "features": "Features", "pricing": "Roadmap", "login": "Log in", "signup": "Get started", "dashboard": "Dashboard", "logout": "Log out", "admin": "Admin" },
+  "Meta": {
+    "title": "Northkit - Self-owned Next.js starter",
+    "description": "Open-source Next.js starter with Better Auth, Drizzle, native i18n, three themes and built-in SEO. No vendor lock-in."
+  },
+  "Nav": {
+    "features": "Features",
+    "pricing": "Roadmap",
+    "login": "Log in",
+    "signup": "Get started",
+    "dashboard": "Dashboard",
+    "logout": "Log out",
+    "admin": "Admin"
+  },
   "Home": {
     "badge": "Open source, MIT",
     "title": "Ship your SaaS on a stack you own.",
@@ -8,22 +19,68 @@
     "cta": "Start building",
     "ctaSecondary": "View on GitHub",
     "featuresTitle": "Everything the other starters skip",
-    "f1t": "Real i18n", "f1d": "English and Indonesian out of the box, RTL-ready, hreflang handled.",
-    "f2t": "Self-hosted auth", "f2d": "Better Auth with email, GitHub and Google. Your users stay in your database.",
-    "f3t": "Admin included", "f3d": "User list, roles and ban controls already wired up.",
-    "f4t": "Three themes", "f4d": "Midnight, Paper and Ember. Switch with one token file.",
-    "f5t": "SEO built in", "f5d": "Metadata, sitemap, robots, Open Graph and JSON-LD from the start.",
-    "f6t": "Deploy anywhere", "f6d": "Docker, Vercel and Cloudflare guides, tested."
+    "f1t": "Real i18n",
+    "f1d": "English and Indonesian out of the box, RTL-ready, hreflang handled.",
+    "f2t": "Self-hosted auth",
+    "f2d": "Better Auth with email, GitHub and Google. Your users stay in your database.",
+    "f3t": "Admin included",
+    "f3d": "User list, roles and ban controls already wired up.",
+    "f4t": "Three themes",
+    "f4d": "Midnight, Paper and Ember. Switch with one token file.",
+    "f5t": "SEO built in",
+    "f5d": "Metadata, sitemap, robots, Open Graph and JSON-LD from the start.",
+    "f6t": "Deploy anywhere",
+    "f6d": "Docker, Vercel and Cloudflare guides, tested."
   },
   "Auth": {
-    "loginTitle": "Welcome back", "signupTitle": "Create your account",
-    "name": "Name", "email": "Email", "password": "Password",
-    "login": "Log in", "signup": "Create account",
-    "noAccount": "No account yet?", "haveAccount": "Already have an account?",
-    "error": "Something went wrong. Check your details and try again."
+    "loginTitle": "Welcome back",
+    "signupTitle": "Create your account",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "login": "Log in",
+    "signup": "Create account",
+    "noAccount": "No account yet?",
+    "haveAccount": "Already have an account?",
+    "error": "Something went wrong. Check your details and try again.",
+    "forgot": "Forgot password?",
+    "forgotTitle": "Reset your password",
+    "forgotHelp": "Enter your email and we will send a reset link.",
+    "sendLink": "Send reset link",
+    "sent": "If that email exists, a reset link is on its way.",
+    "resetTitle": "Choose a new password",
+    "newPassword": "New password",
+    "reset": "Save password",
+    "resetDone": "Password updated. You can log in now.",
+    "backToLogin": "Back to log in"
   },
-  "Dashboard": { "title": "Dashboard", "welcome": "Signed in as", "role": "Role", "theme": "Theme" },
-  "Admin": { "title": "Users", "name": "Name", "email": "Email", "role": "Role", "status": "Status", "banned": "Banned", "active": "Active", "forbidden": "Admins only.", "ban": "Ban", "unban": "Unban", "more": "More actions", "remove": "Delete user", "confirm": "Confirm delete" },
-  "Theme": { "midnight": "Midnight", "paper": "Paper", "ember": "Ember" },
-  "Footer": { "rights": "Northkit. MIT licensed." }
+  "Dashboard": {
+    "title": "Dashboard",
+    "welcome": "Signed in as",
+    "role": "Role",
+    "theme": "Theme"
+  },
+  "Admin": {
+    "title": "Users",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "status": "Status",
+    "banned": "Banned",
+    "active": "Active",
+    "forbidden": "Admins only.",
+    "ban": "Ban",
+    "unban": "Unban",
+    "more": "More actions",
+    "remove": "Delete user",
+    "confirm": "Confirm delete"
+  },
+  "Theme": {
+    "midnight": "Midnight",
+    "paper": "Paper",
+    "ember": "Ember"
+  },
+  "Footer": {
+    "rights": "Northkit. MIT licensed."
+  }
 }

@@ -32,6 +32,10 @@ See [ROADMAP.md](./ROADMAP.md).
 
 MIT
 
+## Email
+
+Set `SMTP_URL` and `MAIL_FROM` to send password reset and verification emails. Without `SMTP_URL`, links are printed to the server log (dev only). Set `REQUIRE_EMAIL_VERIFICATION=true` to block login until the email is verified.
+
 ## Docker
 
 ```bash

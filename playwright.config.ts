@@ -13,7 +13,7 @@ export default defineConfig({
   workers: 1,
   use: { baseURL: `http://localhost:${PORT}`, trace: "retain-on-failure" },
   webServer: {
-    command: `rm -f data/e2e.db* && npm run build && npx next start -p ${PORT}`,
+    command: `rm -f data/e2e.db* && npm run build && npx next start -p ${PORT} 2>&1 | tee data/e2e-server.log`,
     url: `http://localhost:${PORT}/en`,
     timeout: 240_000,
     reuseExistingServer: false,

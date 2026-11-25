@@ -44,6 +44,9 @@ export function AuthForm({ mode, social }: { mode: "login" | "signup"; social: (
         <label className="block text-sm">{t("password")}
           <input name="password" type="password" required minLength={8} autoComplete={signup ? "new-password" : "current-password"} className={input} />
         </label>
+        {!signup && (
+          <p className="text-sm"><Link href="/forgot-password" className="text-accent underline underline-offset-4">{t("forgot")}</Link></p>
+        )}
         {error && <p role="alert" className="text-sm text-danger">{t("error")}</p>}
         <button disabled={busy} className="min-h-11 w-full rounded-lg bg-accent font-medium text-accent-fg disabled:opacity-60">
           {t(signup ? "signup" : "login")}
