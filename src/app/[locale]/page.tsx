@@ -1,4 +1,6 @@
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/seo";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { Link } from "@/i18n/navigation";
@@ -42,4 +44,9 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
       <footer className="border-t border-line py-6 text-center text-sm text-muted">&copy; {new Date().getFullYear()} {f("rights")}</footer>
     </>
   );
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return { alternates: pageAlternates(locale, "") };
 }

@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/seo";
 import { setRequestLocale } from "next-intl/server";
 import { AuthForm } from "@/components/auth-form";
 
@@ -9,4 +11,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
     ...(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET ? (["google"] as const) : []),
   ];
   return <AuthForm mode="signup" social={[...social]} />;
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return { alternates: pageAlternates(locale, "/signup") };
 }

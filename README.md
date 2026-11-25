@@ -2,16 +2,23 @@
 
 Open-source Next.js starter you fully own: Better Auth, Drizzle + SQLite, native i18n (EN/ID, RTL-ready), three themes, admin panel and SEO basics. No vendor lock-in.
 
+![Northkit home, Midnight theme](docs/home-midnight.png)
+
+| Paper | Ember | Mobile (ID) |
+|---|---|---|
+| ![Paper](docs/home-paper.png) | ![Ember](docs/home-ember.png) | ![Mobile](docs/home-mobile-id.png) |
+
+Lighthouse (mobile, local production build): Performance 96-99, Accessibility 100, Best Practices 100, SEO 100.
+
 ## Quick start
 
 ```bash
 cp .env.example .env        # set BETTER_AUTH_SECRET: openssl rand -base64 32
 npm install
-npm run db:generate && npm run db:migrate
 npm run dev
 ```
 
-Open http://localhost:3000. Sign up, then set your user's `role` to `admin` in the `user` table to see `/admin`.
+Migrations run automatically on start. Open http://localhost:3000. Sign up, then set your user's `role` to `admin` in the `user` table to see `/admin`.
 
 ## Stack
 
@@ -24,3 +31,19 @@ See [ROADMAP.md](./ROADMAP.md).
 ## License
 
 MIT
+
+## Docker
+
+```bash
+cp .env.example .env   # set BETTER_AUTH_SECRET and BETTER_AUTH_URL
+docker compose up --build
+```
+
+Data lives in the `northkit-data` volume. The Docker setup has not been built in CI yet.
+
+## Tests
+
+```bash
+npx playwright install chromium
+npm run test:e2e
+```

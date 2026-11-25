@@ -1,0 +1,10 @@
+services:
+  northkit:
+    build: .
+    ports: ["3000:3000"]
+    env_file: .env
+    environment:
+      DATABASE_URL: /data/northkit.db
+    volumes: [northkit-data:/data]
+volumes:
+  northkit-data:

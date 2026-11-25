@@ -1,4 +1,5 @@
 import { headers } from "next/headers";
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { redirect } from "@/i18n/navigation";
 import { auth } from "@/lib/auth";
@@ -27,3 +28,5 @@ export default async function Admin({ params }: { params: Promise<{ locale: stri
     </div>
   );
 }
+
+export const metadata: Metadata = { robots: { index: false, follow: false } };

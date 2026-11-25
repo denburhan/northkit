@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { redirect } from "@/i18n/navigation";
 import { getSession } from "@/lib/session";
@@ -23,3 +24,5 @@ export default async function Dashboard({ params }: { params: Promise<{ locale: 
     </div>
   );
 }
+
+export const metadata: Metadata = { robots: { index: false, follow: false } };
