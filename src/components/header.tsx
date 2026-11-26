@@ -13,6 +13,7 @@ export function Header({ user }: { user: { name: string; role?: string | null } 
           Northkit
         </Link>
         <div className="flex items-center gap-2">
+          <Link href="/blog" className="px-2 text-sm text-muted hover:text-fg">{t("blog")}</Link>
           <LocaleSwitcher />
           {user ? (
             <UserMenu isAdmin={user.role === "admin"} />

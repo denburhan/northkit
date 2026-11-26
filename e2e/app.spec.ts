@@ -88,3 +88,15 @@ test("forgot password flow", async ({ page }) => {
   await page.getByRole("button", { name: "Log in" }).click();
   await expect(page).toHaveURL(/\/en\/dashboard$/);
 });
+
+test("blog list, post, rss, sitemap", async ({ page, request }) => {
+  await page.goto("/en/blog");
+  await page.getByRole("link", { name: "Hello Northkit" }).click();
+  await expect(page).toHaveURL(/\/en\/blog\/hello-northkit$/);
+  await expect(page.getByRole("heading", { level: 2, name: "What is inside" })).toBeVisible();
+  expect((await request.get("/en/blog/nope")).status()).toBe(404);
+  expect((await request.get("/en/blog/..%2F..%2Fpackage")).status()).toBe(404);
+  const rss = await (await request.get("/id/rss.xml")).text();
+  expect(rss).toContain("Halo Northkit");
+  expect(await (await request.get("/sitemap.xml")).text()).toContain("/en/blog/hello-northkit");
+});

@@ -32,6 +32,10 @@ See [ROADMAP.md](./ROADMAP.md).
 
 MIT
 
+## Blog
+
+Write posts as Markdown in `content/blog/<locale>/<slug>.md` with `title`, `description`, `date` frontmatter. They appear at `/<locale>/blog`, in `sitemap.xml` and in `/<locale>/rss.xml`. This is plain Markdown, not MDX (no React components in posts yet).
+
 ## Email
 
 Set `SMTP_URL` and `MAIL_FROM` to send password reset and verification emails. Without `SMTP_URL`, links are printed to the server log (dev only). Set `REQUIRE_EMAIL_VERIFICATION=true` to block login until the email is verified.

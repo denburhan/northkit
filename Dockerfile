@@ -14,6 +14,7 @@ COPY --from=build /app/.next/standalone ./
 COPY --from=build /app/.next/static ./.next/static
 COPY --from=build /app/public ./public
 COPY --from=build /app/drizzle ./drizzle
+COPY --from=build /app/content ./content
 COPY --from=build /app/node_modules/better-sqlite3 ./node_modules/better-sqlite3
 COPY --from=build /app/node_modules/bindings ./node_modules/bindings
 COPY --from=build /app/node_modules/file-uri-to-path ./node_modules/file-uri-to-path

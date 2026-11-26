@@ -10,7 +10,8 @@
     "signup": "Mulai",
     "dashboard": "Dasbor",
     "logout": "Keluar",
-    "admin": "Admin"
+    "admin": "Admin",
+    "blog": "Blog"
   },
   "Home": {
     "badge": "Open source, MIT",
@@ -82,5 +83,9 @@
   },
   "Footer": {
     "rights": "Northkit. Lisensi MIT."
+  },
+  "Blog": {
+    "title": "Blog",
+    "empty": "Belum ada tulisan."
   }
 }
